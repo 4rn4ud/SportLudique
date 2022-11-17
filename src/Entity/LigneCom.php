@@ -36,7 +36,10 @@ class LigneCom
         $this->product = new ArrayCollection();
     }
 
-   
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
 
     public function getQuantity(): ?int
     {
