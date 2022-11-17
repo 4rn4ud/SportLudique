@@ -32,8 +32,8 @@ class LigneCom
 
     public function __construct()
     {
-        $this->command = new ArrayCollection();
-        $this->product = new ArrayCollection();
+        $this->ncommand = new ArrayCollection();
+        $this->nproduct = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -41,6 +41,10 @@ class LigneCom
         return $this->id;
     }
 
+    public function __toString(): string
+    {
+        return $this->getId();
+    }
     public function getQuantity(): ?int
     {
         return $this->quantity;

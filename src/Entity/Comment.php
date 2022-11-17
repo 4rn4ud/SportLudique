@@ -32,6 +32,11 @@ class Comment
         return $this->id;
     }
 
+    public function __toString(): string
+    {
+        return $this->getContent();
+    }
+
     public function getContent(): ?string
     {
         return $this->content;
