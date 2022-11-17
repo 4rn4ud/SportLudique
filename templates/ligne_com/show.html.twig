@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}LigneCom{% endblock %}
+
+{% block body %}
+    <h1>LigneCom</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ ligne_com.id }}</td>
+            </tr>
+            <tr>
+                <th>Quantity</th>
+                <td>{{ ligne_com.quantity }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_ligne_com_index') }}">back to list</a>
+
+    <a href="{{ path('app_ligne_com_edit', {'id': ligne_com.id}) }}">edit</a>
+
+    {{ include('ligne_com/_delete_form.html.twig') }}
+{% endblock %}

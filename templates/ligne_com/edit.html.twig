@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit LigneCom{% endblock %}
+
+{% block body %}
+    <h1>Edit LigneCom</h1>
+
+    {{ include('ligne_com/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('app_ligne_com_index') }}">back to list</a>
+
+    {{ include('ligne_com/_delete_form.html.twig') }}
+{% endblock %}

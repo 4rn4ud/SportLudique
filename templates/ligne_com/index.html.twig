@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}LigneCom index{% endblock %}
+
+{% block body %}
+    <h1>LigneCom index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Quantity</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for ligne_com in ligne_coms %}
+            <tr>
+                <td>{{ ligne_com.id }}</td>
+                <td>{{ ligne_com.quantity }}</td>
+                <td>
+                    <a href="{{ path('app_ligne_com_show', {'id': ligne_com.id}) }}">show</a>
+                    <a href="{{ path('app_ligne_com_edit', {'id': ligne_com.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_ligne_com_new') }}">Create new</a>
+{% endblock %}
