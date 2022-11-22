@@ -14,7 +14,7 @@ class CommandType extends AbstractType
         $builder
             ->add('date')
             ->add('person')
-            ->add('ligneCom')
+            //->add('ligneCom')
         ;
     }
 
