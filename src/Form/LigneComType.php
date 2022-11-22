@@ -14,6 +14,8 @@ class LigneComType extends AbstractType
         $builder
             ->add('quantity')
             ->add('comment')
+            ->add('product')
+            ->add('command')
         ;
     }
 
