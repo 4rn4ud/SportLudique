@@ -38,6 +38,11 @@ class Command
         return $this->id;
     }
 
+    public function __toString(): string
+    {
+        return $this->getId();
+    }
+
     public function getDate(): ?\DateTimeInterface
     {
         return $this->date;
