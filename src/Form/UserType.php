@@ -15,6 +15,10 @@ class UserType extends AbstractType
         {
                 $builder
                         ->add('username')
+                        ->add('email')
+                        ->add('surname')
+                        ->add('tel')
+                        ->add('username')
                         // suppression du role qui sera défini par défaut
                         ->add('password', PasswordType::class)
                 ;
