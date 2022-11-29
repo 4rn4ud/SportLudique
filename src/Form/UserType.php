@@ -18,7 +18,7 @@ class UserType extends AbstractType
                         ->add('email')
                         ->add('surname')
                         ->add('tel')
-                        ->add('username')
+                        //->add('username')
                         // suppression du role qui sera défini par défaut
                         ->add('password', PasswordType::class)
                 ;
