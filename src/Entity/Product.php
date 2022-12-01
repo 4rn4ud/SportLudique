@@ -30,6 +30,9 @@ class Product
     #[ORM\OneToMany(mappedBy: 'product', targetEntity: LigneCom::class)]
     private Collection $product;
 
+    #[ORM\Column(length: 255)]
+    private ?string $description = null;
+
     public function __construct()
     {
         $this->product = new ArrayCollection();
@@ -109,6 +112,18 @@ class Product
                 $product->setProduct(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getDescription(): ?string
+    {
+        return $this->description;
+    }
+
+    public function setDescription(string $description): self
+    {
+        $this->description = $description;
 
         return $this;
     }
