@@ -1,3 +1,4 @@
+{% block body %}
 <!--A Design by W3layouts
 Author: W3layout
 Author URL: http://w3layouts.com
@@ -99,6 +100,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						  <li class="list_img"><img src="images/1.jpg" alt=""/></li>
 						  <li class="list_desc"><h4><a href="#">velit esse molestie</a></h4><span class="actual">1 x
                           $12.00</span></li>
+						  
 						  <div class="login_buttons">
 							 <div class="check_button"><a href="/checkout">Check out</a></div>
 							 <div class="clear"></div>
@@ -132,7 +134,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<div id="loginbox" class="loginbox">
 						<form action="" method="post" name="login" id="login-form">
 						  <fieldset class="input">
-						    <p id="login-form-username">
+						    <!--<p id="login-form-username">
 						      <label for="modlgn_username">Email</label>
 						      <input id="modlgn_username" type="text" name="email" class="inputbox" size="18" autocomplete="off">
 						    </p>
@@ -143,8 +145,33 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						    <div class="remember">
 							    <p id="login-form-remember">
 							      <label for="modlgn_remember"><a href="#">Forget Your Password ? </a></label>
-							   </p>
-							    <input type="submit" name="Submit" class="button" value="Login"><div class="clear"></div>
+							   </p>-->
+
+								<form method="post">
+								{% if error %}
+									<div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+								{% endif %}
+
+								{% if app.user %}
+									<div class="mb-3">
+										You are logged in as {{ app.user.userIdentifier }}, <a href="{{ path('app_logout') }}">Logout</a>
+									</div>
+								{% endif %}
+
+							
+								<label for="inputEmail">Email</label>
+								<input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" required autofocus>
+								<label for="inputPassword">Password</label>
+								<input type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required>
+
+								<input type="hidden" name="_csrf_token"
+									value="{{ csrf_token('authenticate') }}">
+									
+								<div class="clear"></div>
+								
+								<input class="btn btn-lg btn-primary" type="submit" value="Login">
+								
+								<div class="clear"></div>
 							 </div>
 						  </fieldset>
 						 </form>
@@ -226,3 +253,5 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		</div>
 </body>	
 </html>
+
+{% endblock %}
