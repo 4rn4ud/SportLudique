@@ -24,7 +24,7 @@ class NavigationController extends AbstractController
          */
         public function membre()
         {
-                return $this->render('navigation/membre.html.twig');
+                return $this->render('navigation/home.html.twig');
         }
 
         /**
