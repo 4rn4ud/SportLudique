@@ -60,22 +60,22 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			  <div class="col-md-12">
 				 <div class="header-left">
 					 <div class="logo">
-						<a href="/"><img src="images/logo.png" alt=""/></a>
+						<a href="{{ path('index') }}"><img src="images/logo.png" alt=""/></a>
 					 </div>
 					 <div class="menu">
 						  <a class="toggleMenu" href="#"><img src="images/nav.png" alt="" /></a>
 						    <ul class="nav" id="nav">
-						    	<li><a href="/shop">Shop</a></li>
+						    	<li><a href="{{ path('shop') }}">Shop</a></li>
 						    	<li><a href="team.html">Team</a></li>
 						    	<li><a href="experiance.html">Experiance</a></li>
 						    	<li><a href="shop.html">Company</a></li>
-								<li><a href="/contact">Contact</a></li>
-								<li><a href="/login">Login</a></li>
+								<li><a href="{{ path('contact') }}">Contact</a></li>
+								<li><a href="{{ path('app_login') }}">Login</a></li>
 
-								<li><a href="/product">Produit</a></li>
-						    	<li><a href="/user">User</a></li>
-								<li><a href="/command">Commande</a></li>
-								<li><a href="/lignecom">LigneCom</a></li>
+								<li><a href="{{ path('app_product_index') }}">Produit</a></li>
+						    	<li><a href="{{ path('app_user_index') }}">User</a></li>
+								<li><a href="{{ path('app_command_index') }}">Commande</a></li>
+								<li><a href="{{ path('app_ligne_com_index') }}">LigneCom</a></li>
 
 								<div class="clear"></div>
 							</ul>
@@ -113,7 +113,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						  <li class="list_desc"><h4><a href="#">velit esse molestie</a></h4><span class="actual">1 x
                           $12.00</span></li>
 						  <div class="login_buttons">
-							 <div class="check_button"><a href="/checkout">Check out</a></div>
+							 <div class="check_button"><a href="{{ path('checkout') }}">Check out</a></div>
 							 <div class="clear"></div>
 						  </div>
 						  <div class="clear"></div>
