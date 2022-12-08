@@ -12,7 +12,7 @@
                 <th>Quantityp</th>
                 <th>Label</th>
                 <th>Unitprice</th>
-                <th>actions</th>
+                <th>Description</th>
             </tr>
         </thead>
         <tbody>
@@ -22,6 +22,7 @@
                 <td>{{ product.quantityp }}</td>
                 <td>{{ product.label }}</td>
                 <td>{{ product.unitprice }}</td>
+                <td>{{ product.description }}</td>
                 <td>
                     <a href="{{ path('app_product_show', {'id': product.id}) }}">show</a>
                     <a href="{{ path('app_product_edit', {'id': product.id}) }}">edit</a>

@@ -27,6 +27,9 @@ class Product
     #[ORM\Column]
     private ?int $unitprice = null;
 
+    #[ORM\Column(length: 255)]
+    private ?string $description = null;
+
     #[ORM\OneToMany(mappedBy: 'product', targetEntity: LigneCom::class)]
     private Collection $product;
 
@@ -82,6 +85,17 @@ class Product
         return $this;
     }
 
+    public function getDescription(): ?string
+    {
+        return $this->description;
+    }
+
+    public function setDescription(string $description): self
+    {
+        $this->description = $description;
+
+        return $this;
+    }
     
     /**
      * @return Collection<int, LigneCom>

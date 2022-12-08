@@ -15,6 +15,7 @@ class ProductType extends AbstractType
             ->add('quantityp')
             ->add('label')
             ->add('unitprice')
+            ->add('description')
             //->add('ligneCom')
         ;
     }
