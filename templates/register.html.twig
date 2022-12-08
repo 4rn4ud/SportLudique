@@ -49,7 +49,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
      </script>
  </head>
 <body>
-{{ form_start(form, {'attr': {'id': 'new_edit_utilisateur'}}) }}
 	<div class="header">
 		<div class="container">
 			<div class="row">
@@ -119,33 +118,28 @@ License URL: http://creativecommons.org/licenses/by/3.0/
       <div class="shop_top">
 	     <div class="container">
 						<form> 
+						{{ form_start(form, {'attr': {'id': 'new_edit_utilisateur'}}) }}
 								<div class="register-top-grid">
 										<h3>PERSONAL INFORMATION</h3>
 										<div>
-											
+											<span>First Name<label>*</label></span>
 											<!--<input type="text">-->
-										
-						{{ form_label(form.username) }}
-                        {{ form_widget(form.username) }}
-
+											{{ form_widget(form.username) }}
 										</div>
 										<div>
-											
+											<span>Last Name<label>*</label></span>
 											<!--<input type="text"> -->
-						{{ form_label(form.surname) }}
-                        {{ form_widget(form.surname) }}
+											{{ form_widget(form.surname) }}
 										</div>
 										<div>
-											
+											<span>Email<label>*</label></span>
 											<!--<input type="text"> -->
-						{{ form_label(form.email) }}
-                        {{ form_widget(form.email) }}
+											{{ form_widget(form.email) }}
 										</div>
-																				<div>
-											
+										<div>
+											<span>Tel<label>*</label></span>
 											<!--<input type="text"> -->
-                        {{ form_label(form.tel) }}
-                        {{ form_widget(form.tel) }}
+                        					{{ form_widget(form.tel) }}
 										</div>
 										
 										<div class="clear"> </div>
@@ -155,22 +149,20 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 								<div class="register-bottom-grid">
 										<h3>LOGIN INFORMATION</h3>
 										<div>
-											
+											<span>Password<label>*</label></span>
 											<!--<input type="text">-->
-						{{ form_label(form.password) }}
-                        {{ form_widget(form.password) }}
+											{{ form_widget(form.password) }}
 										</div>
 										<div>
-											
+											<span>Confirm Password<label>*</label></span>
 											<!--<input type="text">-->
-						<label for="verifpass">Saisir une seconde fois le mot de passe</label>
-                        <input type="password" id="verifpass" required>
+                        					<input type="password" id="verifpass" required>
 										</div>
 										<div class="clear"> </div>
 								</div>
 								<div class="clear"> </div>
 								<!--<input type="submit" value="submit">-->
-						<button class="btn btn-success">{{ button_label|default('Save') }}</button>
+								<button class="btn btn-success">{{ button_label|default('Save') }}</button>
 						{{ form_end(form) }}
 						</form>
 					</div>
