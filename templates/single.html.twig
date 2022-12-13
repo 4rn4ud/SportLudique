@@ -180,7 +180,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				        <!-- end product_slider -->
 				        <div class="single_right">
 				        	<h3>{{product.label}}</h3>
-				        	<p class="m_10">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse</p>
+							<div class="desc">
+								<p>{{product.description}}</p>
+							</div>
 							<div class="btn_form">
 							   <form>
 								 <input type="submit" value="buy now" title="">
@@ -198,12 +200,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					       <ul class="prosuct-qty">
 								<span>Quantity:</span>
 								<select>
-									<option>1</option>
-									<option>2</option>
-									<option>3</option>
-									<option>4</option>
-									<option>5</option>
-									<option>6</option>
+									{% for quantity in 1..(product.quantityp) %}
+										<option>{{ quantity }}</option>
+									{% endfor %}
 								</select>
 							</ul>
 							<button type="submit" name="Submit" class="exclusive">
@@ -212,10 +211,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				   </div>
 			   </div>
 			</div>		
-			<div class="desc">
-			   	<h4>Description</h4>
-			   	<p>{{product.description}}</p>
-			</div>
 			<div class="row">
 				<h4 class="m_11">Related Products in the same Category</h4>
 				<div class="col-md-4 product1">
