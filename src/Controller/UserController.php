@@ -34,12 +34,13 @@ class UserController extends AbstractController
         $form->handleRequest($request);
 
         
-        $hashedPassword = $passwordHasher->hashPassword($user,$password);
-        $user->setPassword($hashedPassword);
-        
         if ($form->isSubmitted() && $form->isValid()) {
-            $userRepository->save($user, true);
+            
 
+        $plaintextPassword = $user->getPassword();
+        $hashedPassword = $passwordHasher->hashPassword($user,$plaintextPassword);
+        $user->setPassword($hashedPassword);
+        $userRepository->save($user, true);
             return $this->redirectToRoute('app_user_index', [], Response::HTTP_SEE_OTHER);
         }
 
