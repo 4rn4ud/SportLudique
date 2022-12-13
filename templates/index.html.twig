@@ -70,7 +70,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						    	<!--<li><a href="experiance.html">Experiance</a></li>-->
 						    	<!--<li><a href="shop.html">Company</a></li>-->
 								<li><a href="{{ path('contact') }}">Contact</a></li>
+
+								{% if not app.user %}
 								<li><a href="{{ path('app_login') }}">Login</a></li>
+								{% endif %}
+								
 								<!--<li><a href="{{ path('app_product_index') }}">Produit</a></li>-->
 						    	<!--<li><a href="{{ path('app_user_index') }}">User</a></li>-->
 								<!--<li><a href="{{ path('app_command_index') }}">Commande</a></li>-->
@@ -79,6 +83,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 								<li><a href="{{ path('app_product_index') }}">Admin</a></li>
 								{% endif %}
 
+								{% if app.user %}
+									<li><a href="{{ path('app_logout') }}">Logout</a></li>
+									<li style="color: lightgreen;">{{ app.user.userIdentifier }}</li>
+								{% endif %}
+
+
+
 								<div class="clear"></div>
 							</ul>
 							<script type="text/javascript" src="js/responsive-nav.js"></script>
@@ -86,6 +97,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	    		    <div class="clear"></div>
 	    	    </div>
 	            <div class="header_right">
+
 	    		  <!-- start search-->
 				      <div class="search-box">
 							<div id="sb-search" class="sb-search">

@@ -60,11 +60,24 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						  <a class="toggleMenu" href="#"><img src="images/nav.png" alt="" /></a>
 						    <ul class="nav" id="nav">
 						    	<li><a href="{{ path('shop') }}">Shop</a></li>
-						    	<li><a href="team.html">Team</a></li>
+						    	<!--<li><a href="team.html">Team</a></li>
 						    	<li><a href="experiance.html">Experiance</a></li>
-						    	<li><a href="shop.html">Company</a></li>
+						    	<li><a href="shop.html">Company</a></li>-->
 								<li class="current"><a href="{{ path('contact') }}">Contact</a></li>
+								
+								{% if not app.user %}
 								<li><a href="{{ path('app_login') }}">Login</a></li>
+								{% endif %}
+								
+
+								{% if is_granted('ROLE_ADMIN') %}
+								<li><a href="{{ path('app_product_index') }}">Admin</a></li>
+								{% endif %}
+
+								{% if app.user %}
+									<li><a href="{{ path('app_logout') }}">Logout</a></li>
+									<li style="color: lightgreen;">{{ app.user.userIdentifier }}</li>
+								{% endif %}
 								<div class="clear"></div>
 							</ul>
 							<script type="text/javascript" src="js/responsive-nav.js"></script>
@@ -135,7 +148,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				   </div>
 				</div>
 			</div>
-			<div class="row">
+			<!--<div class="row">
 				<div class="col-md-12 contact">
 				  <form method="post" action="contact-post.html">
 					<div class="to">
@@ -152,7 +165,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	                <div class="clear"></div>
                    </form>
 			     </div>
-		    </div>
+		    </div>-->
 	     </div>
 	   </div>
 	  </div>
