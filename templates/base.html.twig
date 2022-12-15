@@ -91,10 +91,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 								<li><a href="{{ path('app_login') }}">Login</a></li>
 								{% endif %}
 
-								{% if is_granted('ROLE_ADMIN') %}
-								<li><a href="{{ path('app_product_index') }}">Admin</a></li>
-								{% endif %}
-
 								{% if is_granted('ROLE_MARKET') %}
 								<li><a href="{{ path('app_product_index') }}">Market</a></li>
 								{% endif %}
@@ -103,6 +99,16 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 									<li><a href="{{ path('app_logout') }}">Logout</a></li>
 									<li style="color: lightgreen;">{{ app.user.userIdentifier }}</li>
 								{% endif %}
+
+                                {% if is_granted('ROLE_ADMIN') %}
+                                <div>
+                                    <li><a href="{{ path('app_product_index') }}">Product</a></li>
+                                    <li><a href="{{ path('app_command_index') }}">Command</a></li>
+                                    <li><a href="{{ path('app_ligne_com_index') }}">LigneCom</a></li>
+                                    <li><a href="{{ path('app_user_index') }}">Utilisateur</a></li>
+                                    <li><a href="{{ path('app_comment_index') }}">Commentaire</a></li>
+                                </div>
+                                {% endif %}
 							
 								<div class="clear"></div>
 							</ul>
