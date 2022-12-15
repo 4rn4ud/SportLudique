@@ -12,7 +12,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 
-#[IsGranted('ROLE_ADMIN')]
+#[Security("is_granted('ROLE_ADMIN')")]
 #[Route('/comment')]
 class CommentController extends AbstractController
 {

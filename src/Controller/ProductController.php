@@ -13,7 +13,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 
 
-#[IsGranted('ROLE_MARKET')]
+#[Security("is_granted('ROLE_ADMIN') or is_granted('ROLE_MARKET')")]
 #[Route('/product')]
 class ProductController extends AbstractController
 {
