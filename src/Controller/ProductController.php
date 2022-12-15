@@ -13,11 +13,11 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 
 
-#[Security("is_granted('ROLE_ADMIN') or is_granted('ROLE_MARKET')")]
+
 #[Route('/product')]
 class ProductController extends AbstractController
 {
-    
+    #[Security("is_granted('ROLE_ADMIN') or is_granted('ROLE_MARKET') or is_granted('ROLE_ENTREPOT')")]
     #[Route('/', name: 'app_product_index', methods: ['GET'])]
     public function index(ProductRepository $productRepository): Response
     {
@@ -26,6 +26,7 @@ class ProductController extends AbstractController
         ]);
     }
 
+    #[Security("is_granted('ROLE_ADMIN') or is_granted('ROLE_MARKET')")]
     #[Route('/new', name: 'app_product_new', methods: ['GET', 'POST'])]
     public function new(Request $request, ProductRepository $productRepository): Response
     {
@@ -45,6 +46,7 @@ class ProductController extends AbstractController
         ]);
     }
 
+    #[Security("is_granted('ROLE_ADMIN') or is_granted('ROLE_MARKET') or is_granted('ROLE_ENTREPOT')")]
     #[Route('/{id}', name: 'app_product_show', methods: ['GET'])]
     public function show(Product $product): Response
     {
@@ -53,6 +55,7 @@ class ProductController extends AbstractController
         ]);
     }
 
+    #[Security("is_granted('ROLE_ADMIN') or is_granted('ROLE_MARKET') or is_granted('ROLE_ENTREPOT') ")]
     #[Route('/{id}/edit', name: 'app_product_edit', methods: ['GET', 'POST'])]
     public function edit(Request $request, Product $product, ProductRepository $productRepository): Response
     {
@@ -61,7 +64,8 @@ class ProductController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             $productRepository->save($product, true);
-
+          
+            
             return $this->redirectToRoute('app_product_index', [], Response::HTTP_SEE_OTHER);
         }
 
@@ -70,7 +74,7 @@ class ProductController extends AbstractController
             'form' => $form,
         ]);
     }
-
+    #[Security("is_granted('ROLE_ADMIN') or is_granted('ROLE_MARKET')")]
     #[Route('/{id}', name: 'app_product_delete', methods: ['POST'])]
     public function delete(Request $request, Product $product, ProductRepository $productRepository): Response
     {
