@@ -148,6 +148,14 @@
 				    </div>
 				</div> -->
 
+				{% for comment in comments %}
+				<div class="desc" class="col-md-4">
+					<h4>Commentaire n°{{comment.id}}</h4>
+					<p>{{comment.content}}</p>
+					{# <p>{{comment.date}}</p> #}
+				</div>
+				{% endfor %}
+
 			</div>	
 	     </div>
 	   </div>
