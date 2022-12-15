@@ -30,8 +30,7 @@ class ShopController extends AbstractController
             $product = $productRepository->findOneBy(['label' => $recherche]);
             
             
-            return $this->render('shop.html.twig', 
-            [
+            return $this->render('shop.html.twig', [
                 'controller_name' => 'ShopController',
                 'products' => $product,
             ]);
