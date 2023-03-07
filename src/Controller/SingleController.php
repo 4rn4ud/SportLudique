@@ -19,7 +19,8 @@ class SingleController extends AbstractController
         return $this->render('single.html.twig', [
             'controller_name' => 'SingleController',
             'product' => $product,
-            'comments' => $commentRepository->findAll(),
+            //'comments' => $commentRepository->findAll(),
+            'comments' => $commentRepository->findBy(['lignecom' => $product->getId()]),
         ]);
     }
 }
