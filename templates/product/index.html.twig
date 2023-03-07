@@ -13,6 +13,7 @@
                 <th>Label</th>
                 <th>Unitprice</th>
                 <th>Description</th>
+                <th>actions</th>
             </tr>
         </thead>
         <tbody>
@@ -37,19 +38,11 @@
                 {% endif %}
 
 
-
-                <td> <!--provisoire -->
-                    
-                    <a href="{{ path('app_product_edit', {'id': product.id}) }}">edit</a>
-                    
-                </td>
                 <td>
                     <a href="{{ path('app_product_show', {'id': product.id}) }}">show</a>
-                    {% if is_granted(['ROLE_ADMIN', 'ROLE_MARKET']) %}
+                    {% if is_granted('ROLE_ADMIN') or is_granted('ROLE_MARKET') %}
                     <a href="{{ path('app_product_edit', {'id': product.id}) }}">edit</a>
                     {% endif %}
-
-                    
                 </td>
             </tr>
         {% else %}
@@ -59,7 +52,7 @@
         {% endfor %}
         </tbody>
     </table>
-    {% if is_granted('ROLE_ADMIN', 'ROLE_MARKET') %}
+    {% if is_granted('ROLE_ADMIN') or is_granted('ROLE_MARKET') %}
     <a href="{{ path('app_product_new') }}">Create new</a>
     {% endif %}
     

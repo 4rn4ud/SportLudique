@@ -13,24 +13,10 @@
 
     <div> {% endif %}</div>
 
-    {% if is_granted('ROLE_ADMIN', 'ROLE_MARKET') %}
+    {% if is_granted('ROLE_ADMIN') or is_granted('ROLE_MARKET') %}
     {{ include('product/_form.html.twig', {'button_label': 'Update'}) }}
     {{ include('product/_delete_form.html.twig') }}
     {% endif %}
-
-
-<button onclick="myFunction()">Click me</button>
-
-<p id="demo"></p>
-
-<script>
-function myFunction() {
-  document.getElementById("demo").innerHTML = "Hello World";
-}
-</script>
-
-
-
 
 
 <a href="{{ path('app_product_index') }}">back to list</a>
