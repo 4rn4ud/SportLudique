@@ -5,7 +5,7 @@
 {% block body %}
     <h1>Product index</h1>
 
-    <table class="table">
+    <table class="table table-striped">
         <thead>
             <tr>
                 <th>Id</th>
@@ -13,6 +13,7 @@
                 <th>Label</th>
                 <th>Unitprice</th>
                 <th>Description</th>
+                <th>actions</th>
             </tr>
         </thead>
         <tbody>
@@ -37,19 +38,15 @@
                 {% endif %}
 
 
-
-                <td>
-                    
-                    <a href="{{ path('app_product_edit', {'id': product.id}) }}">edit</a>
-                    
-                </td>
                 <td>
                     <a href="{{ path('app_product_show', {'id': product.id}) }}">show</a>
+<<<<<<< HEAD
                     {% if is_granted('ROLE_ADMIN', 'ROLE_MARKET') %}
+=======
+                    {% if is_granted('ROLE_ADMIN') or is_granted('ROLE_MARKET') %}
+>>>>>>> 363657504e877b56d31772214e95ef4eef1ea1af
                     <a href="{{ path('app_product_edit', {'id': product.id}) }}">edit</a>
                     {% endif %}
-
-                    
                 </td>
             </tr>
         {% else %}
@@ -59,7 +56,7 @@
         {% endfor %}
         </tbody>
     </table>
-    {% if is_granted('ROLE_ADMIN', 'ROLE_MARKET') %}
+    {% if is_granted('ROLE_ADMIN') or is_granted('ROLE_MARKET') %}
     <a href="{{ path('app_product_new') }}">Create new</a>
     {% endif %}
     
