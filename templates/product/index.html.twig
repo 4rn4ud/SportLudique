@@ -45,7 +45,7 @@
                 </td>
                 <td>
                     <a href="{{ path('app_product_show', {'id': product.id}) }}">show</a>
-                    {% if is_granted(['ROLE_ADMIN', 'ROLE_MARKET']) %}
+                    {% if is_granted('ROLE_ADMIN', 'ROLE_MARKET') %}
                     <a href="{{ path('app_product_edit', {'id': product.id}) }}">edit</a>
                     {% endif %}
 
