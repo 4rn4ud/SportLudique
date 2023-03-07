@@ -40,11 +40,8 @@
 
                 <td>
                     <a href="{{ path('app_product_show', {'id': product.id}) }}">show</a>
-<<<<<<< HEAD
-                    {% if is_granted('ROLE_ADMIN', 'ROLE_MARKET') %}
-=======
+                    
                     {% if is_granted('ROLE_ADMIN') or is_granted('ROLE_MARKET') %}
->>>>>>> 363657504e877b56d31772214e95ef4eef1ea1af
                     <a href="{{ path('app_product_edit', {'id': product.id}) }}">edit</a>
                     {% endif %}
                 </td>
