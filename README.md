@@ -89,7 +89,7 @@ $ composer install
 # Run the project
 $ symfony server:start
 
-# The server will initialize in the <http://localhost:3000>
+# The server will initialize in the <http://localhost:8000>
 ```
 
 ## :memo: License ##
