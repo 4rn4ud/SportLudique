@@ -45,7 +45,7 @@
 
 ## :dart: À propos ##
 
-Describe your project
+SportLudique est un site e-commerce dans le domaine du sport. Ce projet a été réalisé à l'aide de Symfony, un Framework PHP.
 
 ## :sparkles: Caractéristiques ##
 
