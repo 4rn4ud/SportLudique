@@ -9,19 +9,19 @@
 <h1 align="center">SportLudique</h1>
 
 <p align="center">
-  <img alt="Github top language" src="https://img.shields.io/github/languages/top/4rn4ud/sportludique?color=56BEB8">
+  <img alt="Github top language" src="https://img.shields.io/github/languages/top/4rn4ud/SportLudique?color=56BEB8">
 
-  <img alt="Github language count" src="https://img.shields.io/github/languages/count/4rn4ud/sportludique?color=56BEB8">
+  <img alt="Github language count" src="https://img.shields.io/github/languages/count/4rn4ud/SportLudique?color=56BEB8">
 
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/4rn4ud/sportludique?color=56BEB8">
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/4rn4ud/SportLudique?color=56BEB8">
 
-  <img alt="License" src="https://img.shields.io/github/license/4rn4ud/sportludique?color=56BEB8">
+  <img alt="License" src="https://img.shields.io/github/license/4rn4ud/SportLudique?color=56BEB8">
 
-  <!-- <img alt="Github issues" src="https://img.shields.io/github/issues/4rn4ud/sportludique?color=56BEB8" /> -->
+  <!-- <img alt="Github issues" src="https://img.shields.io/github/issues/4rn4ud/SportLudique?color=56BEB8" /> -->
 
-  <!-- <img alt="Github forks" src="https://img.shields.io/github/forks/4rn4ud/sportludique?color=56BEB8" /> -->
+  <!-- <img alt="Github forks" src="https://img.shields.io/github/forks/4rn4ud/SportLudique?color=56BEB8" /> -->
 
-  <!-- <img alt="Github stars" src="https://img.shields.io/github/stars/4rn4ud/sportludique?color=56BEB8" /> -->
+  <!-- <img alt="Github stars" src="https://img.shields.io/github/stars/4rn4ud/SportLudique?color=56BEB8" /> -->
 </p>
 
 <!-- Status -->
@@ -78,10 +78,10 @@ Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) an
 
 ```bash
 # Clone le projet
-$ git clone https://github.com/4rn4ud/sportludique
+$ git clone https://github.com/4rn4ud/SportLudique
 
 # Access
-$ cd sportludique
+$ cd SportLudique
 
 # Install dependencies
 $ composer install
