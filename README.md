@@ -27,13 +27,13 @@
 <!-- Status -->
 
 <h4 align="center"> 
-	🚧  SportLudique 🚀 Under construction...  🚧
+	🚧  SportLudique 🚀 En cours de développement...  🚧
 </h4> 
 
 <hr>
 
 <p align="center">
-  <a href="#dart-about">About</a> &#xa0; | &#xa0; 
+  <a href="#dart-à-propos">About</a> &#xa0; | &#xa0; 
   <a href="#sparkles-features">Caractéristiques</a> &#xa0; | &#xa0;
   <a href="#rocket-technologies">Technologies</a> &#xa0; | &#xa0;
   <!-- <a href="#white_check_mark-requirements">Requirements</a> &#xa0; | &#xa0; -->
@@ -43,7 +43,7 @@
 
 <br>
 
-## :dart: About ##
+## :dart: À propos ##
 
 Describe your project
 
@@ -57,13 +57,6 @@ Describe your project
 
 The following tools were used in this project:
 
-<!--
-- [Expo](https://expo.io/)
-- [Node.js](https://nodejs.org/en/)
-- [React](https://pt-br.reactjs.org/)
-- [React Native](https://reactnative.dev/)
-- [TypeScript](https://www.typescriptlang.org/)
--->
 - [Symfony](https://symfony.com/)
 - [Bootstrap](https://getbootstrap.com/)
 
