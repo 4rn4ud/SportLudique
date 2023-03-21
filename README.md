@@ -33,11 +33,11 @@
 <hr>
 
 <p align="center">
-  <a href="#dart-à-propos">About</a> &#xa0; | &#xa0; 
-  <a href="#sparkles-features">Caractéristiques</a> &#xa0; | &#xa0;
+  <a href="#dart-à-propos">À propos</a> &#xa0; | &#xa0;
+  <a href="#sparkles-caractéristiques">Caractéristiques</a> &#xa0; | &#xa0;
   <a href="#rocket-technologies">Technologies</a> &#xa0; | &#xa0;
   <!-- <a href="#white_check_mark-requirements">Requirements</a> &#xa0; | &#xa0; -->
-  <a href="#checkered_flag-starting">Starting</a> &#xa0; | &#xa0;
+  <a href="#checkered_flag-commencer">Commencer</a> &#xa0; | &#xa0;
   <a href="#memo-auteurs">Auteurs</a>
 </p>
 
@@ -47,7 +47,7 @@
 
 Describe your project
 
-## :sparkles: Features ##
+## :sparkles: Caractéristiques ##
 
 :heavy_check_mark: Feature 1;\
 :heavy_check_mark: Feature 2;\
@@ -65,19 +65,19 @@ The following tools were used in this project:
 
 Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) and [Node](https://nodejs.org/en/) installed.
 -->
-## :checkered_flag: Starting ##
+## :checkered_flag: Commencer ##
 
 ```bash
-# Clone le projet
+# Cloner le projet
 $ git clone https://github.com/4rn4ud/SportLudique
 
-# Access
+# Accéder
 $ cd SportLudique
 
 # Install dependencies
 $ composer install
 
-# Run the project
+# Lancer le projet
 $ symfony server:start
 
 # The server will initialize in the <http://localhost:8000>
@@ -88,7 +88,7 @@ $ symfony server:start
 This project is under license from MIT. For more details, see the [LICENSE](LICENSE.md) file.
 -->
 
-Made with :heart: by <a href="https://github.com/4rn4ud" target="_blank">Arnaud L.</a> and <a href="https://github.com/TitouanClapier" target="_blank">Titouan C.</a>
+Fait avec :heart: par <a href="https://github.com/4rn4ud" target="_blank">Arnaud L.</a> et <a href="https://github.com/TitouanClapier" target="_blank">Titouan C.</a>
 
 &#xa0;
 
