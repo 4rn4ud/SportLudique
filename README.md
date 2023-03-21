@@ -38,7 +38,7 @@
   <a href="#rocket-technologies">Technologies</a> &#xa0; | &#xa0;
   <!-- <a href="#white_check_mark-requirements">Requirements</a> &#xa0; | &#xa0; -->
   <a href="#checkered_flag-starting">Starting</a> &#xa0; | &#xa0;
-  <a href="#memo-autors">Auteurs</a>
+  <a href="#memo-auteurs">Auteurs</a>
 </p>
 
 <br>
