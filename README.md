@@ -36,7 +36,7 @@
   <a href="#dart-à-propos">À propos</a> &#xa0; | &#xa0;
   <a href="#sparkles-caractéristiques">Caractéristiques</a> &#xa0; | &#xa0;
   <a href="#rocket-technologies">Technologies</a> &#xa0; | &#xa0;
-  <!-- <a href="#white_check_mark-requirements">Requirements</a> &#xa0; | &#xa0; -->
+  <a href="#white_check_mark-prérequis">Prérequis</a> &#xa0; | &#xa0;
   <a href="#checkered_flag-commencer">Commencer</a> &#xa0; | &#xa0;
   <a href="#memo-auteurs">Auteurs</a>
 </p>
@@ -60,11 +60,10 @@ The following tools were used in this project:
 - [Symfony](https://symfony.com/)
 - [Bootstrap](https://getbootstrap.com/)
 
-<!--
-## :white_check_mark: Requirements ##
+## :white_check_mark: Prérequis ##
 
-Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) and [Node](https://nodejs.org/en/) installed.
--->
+Avant de commencer :checkered_flag:, vous avez besoin d'avoir [Git](https://git-scm.com) et [PHP](https://www.php.net/) d'installés.
+
 ## :checkered_flag: Commencer ##
 
 ```bash
@@ -81,6 +80,16 @@ $ composer install
 $ symfony server:start
 
 # The server will initialize in the <http://localhost:8000>
+```
+
+Cloner le projet
+```bash
+$ git clone https://github.com/4rn4ud/SportLudique
+```
+
+Accéder au dossier
+```bash
+$ cd SportLudique
 ```
 
 ## :memo: Auteurs ##
