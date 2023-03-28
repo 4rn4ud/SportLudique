@@ -83,7 +83,7 @@ $ symfony server:start
 # The server will initialize in the <http://localhost:8000>
 ```
 
-### Récupérer le projet ###
+## Récupérer le projet ##
 
 Cloner le projet
 ```bash
