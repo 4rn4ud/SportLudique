@@ -62,7 +62,8 @@ The following tools were used in this project:
 
 ## :white_check_mark: Prérequis ##
 
-Avant de commencer :checkered_flag:, vous avez besoin d'avoir [Git](https://git-scm.com) et [PHP](https://www.php.net/) d'installés.
+Avant de commencer :checkered_flag:, vous avez besoin d'avoir [Git](https://git-scm.com) et [PHP](https://www.php.net/) d'installés.\
+Veuillez à bien modifier le fichier php.ini ce trouvant dans C:\php8 et de décommenter la ligne contenant ```bash #extension=pdo_mysql ``` si cela n'est pas déjà fait.
 
 ## :checkered_flag: Commencer ##
 
@@ -82,14 +83,29 @@ $ symfony server:start
 # The server will initialize in the <http://localhost:8000>
 ```
 
+### Récupérer le projet ###
+
 Cloner le projet
 ```bash
 $ git clone https://github.com/4rn4ud/SportLudique
 ```
 
+### Installation des dépendances ###
+
 Accéder au dossier
 ```bash
 $ cd SportLudique
+```
+
+Installation de Composer
+```bash
+$ composer install
+```
+
+Installation de Doctrine
+```bash
+$ composer require symfony/orm-pack
+$ composer require --dev symfony/maker-bundle
 ```
 
 ## :memo: Auteurs ##
