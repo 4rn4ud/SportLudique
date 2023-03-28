@@ -63,7 +63,7 @@ The following tools were used in this project:
 ## :white_check_mark: Prérequis ##
 
 Avant de commencer :checkered_flag:, vous avez besoin d'avoir [Git](https://git-scm.com) et [PHP](https://www.php.net/) d'installés.\
-Veuillez à bien modifier le fichier php.ini ce trouvant dans C:\php8 et de décommenter la ligne contenant ```bash #extension=pdo_mysql ``` si cela n'est pas déjà fait.
+Veuillez à bien modifier le fichier php.ini ce trouvant dans C:\php8 et de décommenter la ligne contenant ```#extension=pdo_mysql``` si cela n'est pas déjà fait.
 
 ## :checkered_flag: Commencer ##
 
