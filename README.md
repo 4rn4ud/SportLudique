@@ -113,7 +113,7 @@ $ composer require --dev symfony/maker-bundle
 This project is under license from MIT. For more details, see the [LICENSE](LICENSE.md) file.
 -->
 
-Fait avec :heart: par <a href="https://github.com/4rn4ud" target="_blank">Arnaud L.</a> et <a href="https://github.com/TitouanClapier" target="_blank">Titouan C.</a>
+<p>Fait avec :heart: par <a href="https://github.com/4rn4ud" target="_blank">Arnaud L.</a> et <a href="https://github.com/TitouanClapier" target="_blank">Titouan C.</a></p>
 
 &#xa0;
 
