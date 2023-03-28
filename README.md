@@ -49,7 +49,7 @@ SportLudique est un site e-commerce dans le domaine du sport. Ce projet a été 
 
 ## :sparkles: Caractéristiques ##
 
-:heavy_check_mark: Feature 1;\
+:heavy_check_mark: Authentification avec rôles;\
 :heavy_check_mark: Feature 2;\
 :heavy_check_mark: Feature 3;
 
