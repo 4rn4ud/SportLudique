@@ -9,6 +9,8 @@
         <thead>
             <tr>
                 <th>Id</th>
+                <th>Command</th>
+                <th>Product</th>
                 <th>Quantity</th>
                 <th>actions</th>
             </tr>
@@ -17,6 +19,8 @@
         {% for ligne_com in ligne_coms %}
             <tr>
                 <td>{{ ligne_com.id }}</td>
+                <td>{{ ligne_com.command }}</td>
+                <td>{{ ligne_com.product }}</td>
                 <td>{{ ligne_com.quantity }}</td>
                 <td>
                     <a href="{{ path('app_ligne_com_show', {'id': ligne_com.id}) }}">show</a>
