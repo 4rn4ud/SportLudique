@@ -9,6 +9,7 @@
         <thead>
             <tr>
                 <th>Id</th>
+                <th>Id ligneCom</th>
                 <th>Content</th>
                 <th>Note</th>
                 <th>Date</th>
@@ -19,6 +20,7 @@
         {% for comment in comments %}
             <tr>
                 <td>{{ comment.id }}</td>
+                <td>{{ comment.lignecom }}</td>
                 <td>{{ comment.content }}</td>
                 <td>{{ comment.note }}</td>
                 <td>{{ comment.date ? comment.date|date('Y-m-d') : '' }}</td>
