@@ -10,6 +10,7 @@
             <tr>
                 <th>Id</th>
                 <th>Date</th>
+                <th>user</th>
                 <th>actions</th>
             </tr>
         </thead>
@@ -18,6 +19,7 @@
             <tr>
                 <td>{{ command.id }}</td>
                 <td>{{ command.date ? command.date|date('Y-m-d') : '' }}</td>
+                <td>{{ command.user }}</td>
                 <td>
                     <a href="{{ path('app_command_show', {'id': command.id}) }}">show</a>
                     <a href="{{ path('app_command_edit', {'id': command.id}) }}">edit</a>
