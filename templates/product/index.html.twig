@@ -9,9 +9,9 @@
         <thead>
             <tr>
                 <th>Id</th>
-                <th>Quantityp</th>
                 <th>Label</th>
                 <th>Unitprice</th>
+                <th>Quantityp</th>
                 <th>Description</th>
                 <th>actions</th>
             </tr>
@@ -21,19 +21,17 @@
             <tr>
                 
                     
-                
-
                 {% if product.quantityp < 10 %}
                 <td style="color: red;">{{ product.id }}</td>
-                <td style="color: red;">{{ product.quantityp }}</td>
                 <td style="color: red;">{{ product.label }}</td>
                 <td style="color: red;">{{ product.unitprice }}</td>
+                <td style="color: red;">{{ product.quantityp }}</td>
                 <td style="color: red;">{{ product.description }}</td>
                 {% else %}
                 <td>{{ product.id }}</td>
-                <td>{{ product.quantityp }}</td>
                 <td>{{ product.label }}</td>
                 <td>{{ product.unitprice }}</td>
+                <td>{{ product.quantityp }}</td>
                 <td>{{ product.description }}</td>
                 {% endif %}
 
@@ -41,7 +39,7 @@
                 <td>
                     <a href="{{ path('app_product_show', {'id': product.id}) }}">show</a>
                     
-                    {% if is_granted('ROLE_ADMIN') or is_granted('ROLE_MARKET') %}
+                    {% if is_granted('ROLE_ADMIN') or is_granted('ROLE_MARKET') or is_granted('ROLE_ENTREPOT')%}
                     <a href="{{ path('app_product_edit', {'id': product.id}) }}">edit</a>
                     {% endif %}
                 </td>

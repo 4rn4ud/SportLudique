@@ -6,7 +6,7 @@
     <h1>Edit Product</h1>
     
     {% if is_granted("ROLE_ENTREPOT") %}
-    <div> il reste {{ product.quantityp }} {{ product.label }}</div>
+    <div>Il reste {{ product.quantityp }} {{ product.label }}.</div>
     
     <button class="btn">{{ button_label|default('Ajouter') }}</button>
    
