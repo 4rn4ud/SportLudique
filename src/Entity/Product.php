@@ -33,6 +33,15 @@ class Product
     #[ORM\OneToMany(mappedBy: 'product', targetEntity: LigneCom::class)]
     private Collection $product;
 
+    #[ORM\Column(nullable: true)]
+    private ?int $StockAlert = null;
+
+    #[ORM\Column(nullable: true)]
+    private ?int $QteACommander = null;
+
+    #[ORM\ManyToOne]
+    private ?Fournisseur $idFournisseur = null;
+
     public function __construct()
     {
         $this->product = new ArrayCollection();
@@ -123,6 +132,42 @@ class Product
                 $product->setProduct(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getStockAlert(): ?int
+    {
+        return $this->StockAlert;
+    }
+
+    public function setStockAlert(?int $StockAlert): self
+    {
+        $this->StockAlert = $StockAlert;
+
+        return $this;
+    }
+
+    public function getQteACommander(): ?int
+    {
+        return $this->QteACommander;
+    }
+
+    public function setQteACommander(?int $QteACommander): self
+    {
+        $this->QteACommander = $QteACommander;
+
+        return $this;
+    }
+
+    public function getIdFournisseur(): ?Fournisseur
+    {
+        return $this->idFournisseur;
+    }
+
+    public function setIdFournisseur(?Fournisseur $idFournisseur): self
+    {
+        $this->idFournisseur = $idFournisseur;
 
         return $this;
     }

@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}CommandFournisseur index{% endblock %}
+
+{% block body %}
+    <h1>CommandFournisseur index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for command_fournisseur in command_fournisseurs %}
+            <tr>
+                <td>{{ command_fournisseur.id }}</td>
+                <td>
+                    <a href="{{ path('app_command_fournisseur_show', {'id': command_fournisseur.id}) }}">show</a>
+                    <a href="{{ path('app_command_fournisseur_edit', {'id': command_fournisseur.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="2">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_command_fournisseur_new') }}">Create new</a>
+{% endblock %}

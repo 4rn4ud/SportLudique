@@ -26,6 +26,10 @@ class Command
     #[ORM\JoinColumn(nullable: false)]
     private ?User $user = null;
 
+    #[ORM\ManyToOne]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?Product $idProduct = null;
+
     public function __construct()
     {
         $this->command = new ArrayCollection();
@@ -91,6 +95,18 @@ class Command
     public function setUser(?User $user): self
     {
         $this->user = $user;
+
+        return $this;
+    }
+
+    public function getIdProduct(): ?Product
+    {
+        return $this->idProduct;
+    }
+
+    public function setIdProduct(?Product $idProduct): self
+    {
+        $this->idProduct = $idProduct;
 
         return $this;
     }
